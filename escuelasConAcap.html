@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuelas con ACAP</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .navbar {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+        .separator {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="acapEnCurso.html">ACAP en curso</a>
+        <span class="separator">|</span>
+        <a href="acapFinalizadas.html">ACAP finalizadas</a>
+        <span class="separator">|</span>
+        <a href="seccionesSinAcap.html">Escuelas y secciones sin ACAP</a>
+        <span class="separator">|</span>
+        <a href="organizacionesSinAcap.html">Organizaciones sin ACAP</a>
+        <span class="separator">|</span>
+        <a href="escuelasConAcap.html">Escuelas con ACAP</a>
+    </div>
+    <h1>Cantidad de escuelas con ACAP</h1>
+    <input type="file" id="csvFileInput" accept=".csv">
+    <button onclick="processCSV()">Generar reporte</button>
+    <div id="output"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script5.js"></script>
+</body>
+</html>

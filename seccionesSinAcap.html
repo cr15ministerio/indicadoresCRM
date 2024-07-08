@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generar Reporte de Actividades Faltantes</title>
+    <!-- Incluir Papaparse desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <style>
+        .navbar {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+        .separator {
+            padding: 10px 15px;
+        }
+        #report {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="acapEnCurso.html">ACAP en curso</a>
+        <span class="separator">|</span>
+        <a href="acapFinalizadas.html">ACAP finalizadas</a>
+        <span class="separator">|</span>
+        <a href="seccionesSinAcap.html">Escuelas y secciones sin ACAP</a>
+        <span class="separator">|</span>
+        <a href="organizacionesConAcap.html">Organizaciones con ACAP</a>
+        <span class="separator">|</span>
+        <a href="escuelasConAcap.html">Escuelas con ACAP</a>
+    </div>
+    <h1>Generar Reporte de Actividades Faltantes</h1>
+    <!-- Inputs para cargar los archivos CSV -->
+    <div>
+        <label for="escuelasFileInput">Cargar archivo CSV de ESCUELAS y SECCIONES:</label>
+        <input type="file" id="escuelasFileInput" accept=".csv">
+    </div>
+    <div>
+        <label for="actividadesFileInput">Cargar archivo CSV de ACTIVIDADES:</label>
+        <input type="file" id="actividadesFileInput" accept=".csv">
+    </div>
+    <!-- Botón para generar el reporte -->
+    <button onclick="generateReport()">Generar Reporte</button>
+    <!-- Contenedor para el reporte -->
+    <div id="report"></div>
+
+    <script>
+        // Función para leer el archivo CSV cargado
+        function readCSVFile(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const text = event.target.result;
+                    const data = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+                    resolve(data);
+                };
+                reader.onerror = function() {
+                    reject(new Error("Error al leer el archivo CSV"));
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        // Función principal para generar el reporte
+        async function generateReport() {
+            const escuelasFileInput = document.getElementById('escuelasFileInput');
+            const actividadesFileInput = document.getElementById('actividadesFileInput');
+
+            if (escuelasFileInput.files.length === 0 || actividadesFileInput.files.length === 0) {
+                alert("Por favor, cargue ambos archivos CSV.");
+                return;
+            }
+
+            const escuelasFile = escuelasFileInput.files[0];
+            const actividadesFile = actividadesFileInput.files[0];
+
+            try {
+                const escuelasData = await readCSVFile(escuelasFile);
+                const actividadesData = await readCSVFile(actividadesFile);
+
+                const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);
+                mostrarReporte(reporte);
+            } catch (error) {
+                console.error(error);
+                alert("Error al obtener o procesar los archivos CSV.");
+            }
+        }
+
+        // Función para generar el reporte de actividades faltantes
+        function generarReporteActividadesFaltantes(escuelas, actividades) {
+            const actividadesPorEscuelaSeccion = new Map();
+
+            actividades.forEach(actividad => {
+                const key = `${actividad.nombreEscuelaActividades}-${actividad.seccionEscuelaActividades}`;
+                if (!actividadesPorEscuelaSeccion.has(key)) {
+                    actividadesPorEscuelaSeccion.set(key, []);
+                }
+                actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
+            });
+
+            const reporte = [];
+
+            escuelas.forEach(escuela => {
+                const key = `${escuela.nombreEscuela}-${escuela.seccionEscuela}`;
+                if (!actividadesPorEscuelaSeccion.has(key)) {
+                    reporte.push({
+                        nombreEscuela: escuela.nombreEscuela,
+                        seccionEscuela: escuela.seccionEscuela,
+                        actividadFaltante: true
+                    });
+                }
+            });
+
+            return reporte;
+        }
+
+        // Función para mostrar el reporte en una tabla HTML
+        function mostrarReporte(reporte) {
+            const reportContainer = document.getElementById('report');
+            reportContainer.innerHTML = '';
+
+            if (reporte.length === 0) {
+                reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
+                return;
+            }
+
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            const headerRow = document.createElement('tr');
+            const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            reporte.forEach(rowData => {
+                const row = document.createElement('tr');
+                const cellNombreEscuela = document.createElement('td');
+                const cellSeccionEscuela = document.createElement('td');
+                const cellActividadFaltante = document.createElement('td');
+
+                cellNombreEscuela.textContent = rowData.nombreEscuela;
+                cellSeccionEscuela.textContent = rowData.seccionEscuela;
+                cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+
+                row.appendChild(cellNombreEscuela);
+                row.appendChild(cellSeccionEscuela);
+                row.appendChild(cellActividadFaltante);
+
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            reportContainer.appendChild(table);
+        }
+    </script>
+</body>
+</html>
