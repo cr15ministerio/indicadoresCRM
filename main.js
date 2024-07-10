@@ -411,75 +411,6 @@ function countSchoolActivities(data) {
     return uniqueSchools.size;
 }
 
-  function displaySchoolsANDA(schoolCount, totalActivities) {
-    const output = document.getElementById('output');
-    output.innerHTML = '';
-  
-    const sortedSchools = Object.keys(schoolCount).sort();
-  
-    if (sortedSchools.length === 0) {
-        output.innerHTML = '<p>No schools found.</p>';
-        return;
-    }
-  
-    const table = document.createElement('table');
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
-    const tfoot = document.createElement('tfoot');
-  
-    // Create table headers
-    const headers = ['Escuela', 'Cant. ACAP'];
-    const tr = document.createElement('tr');
-    headers.forEach(header => {
-        const th = document.createElement('th');
-        th.innerText = header;
-        tr.appendChild(th);
-    });
-    thead.appendChild(tr);
-  
-    // Create table rows
-    sortedSchools.forEach(school => {
-        const tr = document.createElement('tr');
-        const tdSchool = document.createElement('td');
-        const tdCount = document.createElement('td');
-  
-        tdSchool.innerText = school;
-        tdCount.innerText = schoolCount[school];
-  
-        tr.appendChild(tdSchool);
-        tr.appendChild(tdCount);
-        tbody.appendChild(tr);
-    });
-  
-    // Create table footer for total schools and activities
-    const trTotal = document.createElement('tr');
-    const tdTotalLabel = document.createElement('td');
-    tdTotalLabel.colSpan = 1;
-    tdTotalLabel.innerText = 'Total de escuelas';
-    const tdTotalValue = document.createElement('td');
-    tdTotalValue.innerText = sortedSchools.length;
-  
-    trTotal.appendChild(tdTotalLabel);
-    trTotal.appendChild(tdTotalValue);
-    tfoot.appendChild(trTotal);
-  
-    const trTotalActivities = document.createElement('tr');
-    const tdTotalActivitiesLabel = document.createElement('td');
-    tdTotalActivitiesLabel.colSpan = 1;
-    tdTotalActivitiesLabel.innerText = 'Total de ACAP';
-    const tdTotalActivitiesValue = document.createElement('td');
-    tdTotalActivitiesValue.innerText = totalActivities;
-  
-    trTotalActivities.appendChild(tdTotalActivitiesLabel);
-    trTotalActivities.appendChild(tdTotalActivitiesValue);
-    tfoot.appendChild(trTotalActivities);
-  
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    table.appendChild(tfoot);
-    output.appendChild(table);
-  }
-
   function displaySchools(schoolCount, totalActivities) {
     const output = document.getElementById('output');
     output.innerHTML = '';
@@ -542,5 +473,139 @@ function countSchoolActivities(data) {
     output.appendChild(table);
 }
 
+//código para secciones faltantes
+// Función para procesar el archivo CSV de actividades cargado
+function processCSV1() {
+    const fileInput = document.getElementById('csvFileInput');
+    const file = fileInput.files[0];
 
+    if (!file) {
+        alert('Primero seleccionar archivo CSV.');
+        return;
+    }
+
+    return new Promise((resolve, reject) => {
+        Papa.parse(file, {
+            header: true,
+            complete: function(results) {
+                resolve(results.data);
+            },
+            error: function(error) {
+                reject(error);
+            }
+        });
+    });
+}
+
+// Función para leer el archivo CSV desde el mismo directorio
+function fetchCSVFile() {
+    const url = 'todas-las-escuelas-y-secciones.csv';
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al cargar el archivo CSV");
+            }
+            return response.text();
+        })
+        .then(text => {
+            return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+        });
+}
+
+// Función principal para generar el reporte
+async function processCSVseccionesSinAcap() {
+    if (document.getElementById('csvFileInput').files.length === 0) {
+        alert("Por favor, cargue el archivo CSV de actividades.");
+        return;
+    }
+
+    try {
+        const escuelasData = await fetchCSVFile(); // Nombre del archivo CSV de escuelas y secciones
+        const actividadesData = await processCSV1();
+
+        const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);
+        mostrarReporte(reporte);
+    } catch (error) {
+        console.error(error);
+        alert("Error al obtener o procesar los archivos CSV.");
+    }
+}
+
+// Función para generar el reporte de actividades faltantes
+function generarReporteActividadesFaltantes(escuelas, actividades) {
+    const actividadesPorEscuelaSeccion = new Map();
+
+    actividades.forEach(actividad => {
+        const key = `${actividad.nombreEscuelaActividades}-${actividad.seccionEscuelaActividades}`;
+        if (!actividadesPorEscuelaSeccion.has(key)) {
+            actividadesPorEscuelaSeccion.set(key, []);
+        }
+        actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
+    });
+
+    const reporte = [];
+
+    escuelas.forEach(escuela => {
+        const key = `${escuela.nombreEscuela}-${escuela.seccionEscuela}`;
+        if (!actividadesPorEscuelaSeccion.has(key)) {
+            reporte.push({
+                nombreEscuela: escuela.nombreEscuela,
+                seccionEscuela: escuela.seccionEscuela,
+                actividadFaltante: true
+            });
+        }
+    });
+
+    return reporte;
+}
+
+// Función para mostrar el reporte en una tabla HTML
+function mostrarReporte(reporte) {
+    const reportContainer = document.getElementById('output');
+    reportContainer.innerHTML = '';
+
+    if (reporte.length === 0) {
+        reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
+        return;
+    }
+
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+
+    const headerRow = document.createElement('tr');
+    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+
+    reporte.forEach(rowData => {
+        const row = document.createElement('tr');
+        const cellNombreEscuela = document.createElement('td');
+        const cellSeccionEscuela = document.createElement('td');
+        const cellActividadFaltante = document.createElement('td');
+
+        cellNombreEscuela.textContent = rowData.nombreEscuela;
+        cellSeccionEscuela.textContent = rowData.seccionEscuela;
+        cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+
+        row.appendChild(cellNombreEscuela);
+        row.appendChild(cellSeccionEscuela);
+        row.appendChild(cellActividadFaltante);
+
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    reportContainer.appendChild(table);
+
+    document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
+    document.getElementById('tituloDelReporte').style.visibility = 'visible';
+}
+
+// fin de código para secciones faltantes
   

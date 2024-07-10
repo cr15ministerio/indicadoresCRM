@@ -6,15 +6,28 @@
     <title>Indicadores CRM</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src='main.js'></script>
 </head>
 <body>
-    <ul>
-        <li><a href="acapEnCurso.html">ACAP en curso</a></li>
-        <li><a href="acapFinalizadas.html">ACAP finalizadas</a></li>
-        <li><a href="seccionesSinAcap.html">Escuelas y secciones SIN ACAP</a></li>
-        <li><a href="organizacionesConAcap.html">Organizaciones con ACAP</a></li>
-        <li><a href="escuelasConAcap.html">Escuelas con ACAP</a></li>
-    </ul>
+    <img src="banner-superior-ACAP-2.png" alt="Banner Superior" style="max-width: 350px; display: block; margin-left: auto; margin-right: auto; ">
+    <h1 style="text-align: center">Reportes de indicadores CRM</h1>
+    <h4 class="subTitulo">Cargar archivo CSV y luego elegir el reporte dando clic en el botón correspondiente</h4>
+    
+    <input type="file" id="csvFileInput" accept=".csv" style="width: 100%">
+    
+    <br>
+    <button class="btnReporte" onclick="processCSVacapEnCurso()" style="background-color: pink;">ACAP en curso</button>
+    <button class="btnReporte" onclick="processCSVacapFinalizadas()" style="background-color: rgb(112, 212, 92)">ACAP finalizadas</button>
+    <button class="btnReporte" onclick="processCSVorgConAcap()" style="background-color: rgb(229, 231, 67)">Organizaciones con ACAP</button>
+    <button class="btnReporte" onclick="processCSVescuelasConAcap()" style="background-color: rgb(85, 161, 158)">Escuelas con ACAP</button>
+    <button class="btnReporte" onclick="processCSVseccionesSinAcap()" style="background-color: rgb(230, 116, 40)">Secciones sin ACAP</button>
+    <h1 id="tituloDelReporte" style="visibility: hidden">Acá va el título del reporte</h1>
+    <div id="output"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

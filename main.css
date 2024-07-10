@@ -1,3 +1,20 @@
+.btnReporte{
+  border-radius:12px; padding: 10px 12px; font-size: 12px; border-width: 0px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  opacity: 85%;
+}
+
+.btnReporte:hover {
+  opacity: 100%;
+}
+
+.subTitulo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -5,6 +22,8 @@ html {
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    margin-left: 80px;
+    margin-right: 75px;
   }
   
   h1 {
