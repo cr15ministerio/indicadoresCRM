@@ -2,60 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Generar Reporte de Actividades Faltantes</title>
+    <title>Secciones Faltantes</title>
     <!-- Incluir Papaparse desde el CDN -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
-    <style>
-        .navbar {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: black;
-            padding: 10px 15px;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-        }
-        .separator {
-            padding: 10px 15px;
-        }
-        #report {
-            margin-top: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-    <div class="navbar">
-        <a href="acapEnCurso.html">ACAP en curso</a>
-        <span class="separator">|</span>
-        <a href="acapFinalizadas.html">ACAP finalizadas</a>
-        <span class="separator">|</span>
-        <a href="seccionesSinAcap.html">Escuelas y secciones sin ACAP</a>
-        <span class="separator">|</span>
-        <a href="organizacionesConAcap.html">Organizaciones con ACAP</a>
-        <span class="separator">|</span>
-        <a href="escuelasConAcap.html">Escuelas con ACAP</a>
-    </div>
+
     <h1>Generar Reporte de Actividades Faltantes</h1>
     <!-- Inputs para cargar los archivos CSV -->
-    <div>
-        <label for="escuelasFileInput">Cargar archivo CSV de ESCUELAS y SECCIONES:</label>
-        <input type="file" id="escuelasFileInput" accept=".csv">
-    </div>
     <div>
         <label for="actividadesFileInput">Cargar archivo CSV de ACTIVIDADES:</label>
         <input type="file" id="actividadesFileInput" accept=".csv">
@@ -82,21 +37,34 @@
             });
         }
 
+       // Función para leer el archivo CSV desde el mismo directorio
+function fetchCSVFile() {
+    const url = 'todas-las-escuelas-y-secciones.csv';
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al cargar el archivo CSV");
+            }
+            return response.text();
+        })
+        .then(text => {
+            return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+        });
+}
+
         // Función principal para generar el reporte
         async function generateReport() {
-            const escuelasFileInput = document.getElementById('escuelasFileInput');
             const actividadesFileInput = document.getElementById('actividadesFileInput');
 
-            if (escuelasFileInput.files.length === 0 || actividadesFileInput.files.length === 0) {
-                alert("Por favor, cargue ambos archivos CSV.");
+            if (actividadesFileInput.files.length === 0) {
+                alert("Por favor, cargue el archivo CSV de actividades.");
                 return;
             }
 
-            const escuelasFile = escuelasFileInput.files[0];
             const actividadesFile = actividadesFileInput.files[0];
 
             try {
-                const escuelasData = await readCSVFile(escuelasFile);
+                const escuelasData = await fetchCSVFile('todas-las-escuelas-y-secciones.csv'); // Nombre del archivo CSV de escuelas y secciones
                 const actividadesData = await readCSVFile(actividadesFile);
 
                 const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);

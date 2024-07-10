@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Indicadores CRM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Seleccionar el reporte a emitir</h1>
+    
+    <input type="file" id="csvFileInput" accept=".csv">
+    <button onclick="processCSVacapEnCurso()">ACAP en curso</button>
+    <button onclick="processCSVacapFinalizadas()">ACAP finalizadas</button>
+    <button onclick="processCSVorgConAcap()">Organizaciones con ACAP</button>
+    <button onclick="processCSVescuelasConAcap()">Escuelas con ACAP</button>
+    <h1 id="tituloDelReporte" style="visibility: hidden">Acá va el título del reporte</h1>
+    <div id="output"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
