@@ -472,10 +472,8 @@ function countSchoolActivities(data) {
     table.appendChild(tfoot);
     output.appendChild(table);
 }
-
-//código para secciones faltantes
-// Función para procesar el archivo CSV de actividades cargado
-function processCSV1() {
+   // Función para leer el archivo CSV cargado
+   function processCSV1() {
     const fileInput = document.getElementById('csvFileInput');
     const file = fileInput.files[0];
 
@@ -532,80 +530,140 @@ async function processCSVseccionesSinAcap() {
 }
 
 // Función para generar el reporte de actividades faltantes
-function generarReporteActividadesFaltantes(escuelas, actividades) {
-    const actividadesPorEscuelaSeccion = new Map();
 
-    actividades.forEach(actividad => {
-        const key = `${actividad.nombreEscuelaActividades}-${actividad.seccionEscuelaActividades}`;
-        if (!actividadesPorEscuelaSeccion.has(key)) {
-            actividadesPorEscuelaSeccion.set(key, []);
-        }
-        actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
-    });
+        // Función para leer el archivo CSV cargado
+        function processCSV1() {
+            const fileInput = document.getElementById('csvFileInput');
+            const file = fileInput.files[0];
 
-    const reporte = [];
+            if (!file) {
+                alert('Primero seleccionar archivo CSV.');
+                return;
+            }
 
-    escuelas.forEach(escuela => {
-        const key = `${escuela.nombreEscuela}-${escuela.seccionEscuela}`;
-        if (!actividadesPorEscuelaSeccion.has(key)) {
-            reporte.push({
-                nombreEscuela: escuela.nombreEscuela,
-                seccionEscuela: escuela.seccionEscuela,
-                actividadFaltante: true
+            return new Promise((resolve, reject) => {
+                Papa.parse(file, {
+                    header: true,
+                    complete: function(results) {
+                        resolve(results.data);
+                    },
+                    error: function(error) {
+                        reject(error);
+                    }
+                });
             });
         }
-    });
 
-    return reporte;
-}
+        // Función para leer el archivo CSV desde el mismo directorio
+        function fetchCSVFile() {
+            const url = 'todas-las-escuelas-y-secciones.csv';
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Error al cargar el archivo CSV");
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+                });
+        }
 
-// Función para mostrar el reporte en una tabla HTML
-function mostrarReporte(reporte) {
-    const reportContainer = document.getElementById('output');
-    reportContainer.innerHTML = '';
+        // Función principal para generar el reporte
+        async function processCSVseccionesSinAcap() {
+            if (document.getElementById('csvFileInput').files.length === 0) {
+                alert("Por favor, cargue el archivo CSV de actividades.");
+                return;
+            }
 
-    if (reporte.length === 0) {
-        reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
-        return;
-    }
+            try {
+                const escuelasData = await fetchCSVFile(); // Nombre del archivo CSV de escuelas y secciones
+                const actividadesData = await processCSV1();
 
-    const table = document.createElement('table');
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
+                const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);
+                mostrarReporte(reporte);
+            } catch (error) {
+                console.error(error);
+                alert("Error al obtener o procesar los archivos CSV.");
+            }
+        }
 
-    const headerRow = document.createElement('tr');
-    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
-    headers.forEach(headerText => {
-        const th = document.createElement('th');
-        th.textContent = headerText;
-        headerRow.appendChild(th);
-    });
-    thead.appendChild(headerRow);
+        // Función para generar el reporte de actividades faltantes
+        function generarReporteActividadesFaltantes(escuelas, actividades) {
+            const actividadesPorEscuelaSeccion = new Map();
 
-    reporte.forEach(rowData => {
-        const row = document.createElement('tr');
-        const cellNombreEscuela = document.createElement('td');
-        const cellSeccionEscuela = document.createElement('td');
-        const cellActividadFaltante = document.createElement('td');
+            actividades.forEach(actividad => {
+                const nombreEscuelaActividad = actividad.nombreEscuelaActividad ? actividad.nombreEscuelaActividad.trim() : '';
+                const seccionEscuelaActividad = actividad.seccionEscuelaActividad ? actividad.seccionEscuelaActividad.trim() : '';
+                const key = `${nombreEscuelaActividad}-${seccionEscuelaActividad}`;
+                if (!actividadesPorEscuelaSeccion.has(key)) {
+                    actividadesPorEscuelaSeccion.set(key, []);
+                }
+                actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
+            });
 
-        cellNombreEscuela.textContent = rowData.nombreEscuela;
-        cellSeccionEscuela.textContent = rowData.seccionEscuela;
-        cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+            const reporte = [];
 
-        row.appendChild(cellNombreEscuela);
-        row.appendChild(cellSeccionEscuela);
-        row.appendChild(cellActividadFaltante);
+            escuelas.forEach(escuela => {
+                const nombreEscuela = escuela.nombreEscuela ? escuela.nombreEscuela.trim() : '';
+                const seccionEscuela = escuela.seccionEscuela ? escuela.seccionEscuela.trim() : '';
+                const key = `${nombreEscuela}-${seccionEscuela}`;
+                if (!actividadesPorEscuelaSeccion.has(key)) {
+                    reporte.push({
+                        nombreEscuela: escuela.nombreEscuela,
+                        seccionEscuela: escuela.seccionEscuela,
+                        actividadFaltante: true
+                    });
+                }
+            });
 
-        tbody.appendChild(row);
-    });
+            return reporte;
+        }
 
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    reportContainer.appendChild(table);
+        // Función para mostrar el reporte en una tabla HTML
+        function mostrarReporte(reporte) {
+            const reportContainer = document.getElementById('output');
+            reportContainer.innerHTML = '';
 
-    document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
-    document.getElementById('tituloDelReporte').style.visibility = 'visible';
-}
+            if (reporte.length === 0) {
+                reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
+                return;
+            }
 
-// fin de código para secciones faltantes
-  
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            const headerRow = document.createElement('tr');
+            const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            reporte.forEach(rowData => {
+                const row = document.createElement('tr');
+                const cellNombreEscuela = document.createElement('td');
+                const cellSeccionEscuela = document.createElement('td');
+                const cellActividadFaltante = document.createElement('td');
+
+                cellNombreEscuela.textContent = rowData.nombreEscuela;
+                cellSeccionEscuela.textContent = rowData.seccionEscuela;
+                cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+
+                row.appendChild(cellNombreEscuela);
+                row.appendChild(cellSeccionEscuela);
+                row.appendChild(cellActividadFaltante);
+
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            reportContainer.appendChild(table);
+
+            document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
+            document.getElementById('tituloDelReporte').style.visibility = 'visible';
+        }
