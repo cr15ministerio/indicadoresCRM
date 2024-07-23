@@ -511,7 +511,7 @@ function fetchCSVFile() {
 }
 
 // Función principal para generar el reporte
-async function processCSVseccionesSinAcap() {
+async function processCSVseccionesSinAcapOLD() {
     if (document.getElementById('csvFileInput').files.length === 0) {
         alert("Por favor, cargue el archivo CSV de actividades.");
         return;
@@ -529,280 +529,305 @@ async function processCSVseccionesSinAcap() {
     }
 }
 
-// Código para generar el reporte de secciones SIN ACAP
+//*******************************************************************************
+// ************* Código para generar reporte de secciones SIN ACAP **************
+//*******************************************************************************
 
-        // Función para leer el archivo CSV cargado
-        function processCSV1() {
-            const fileInput = document.getElementById('csvFileInput');
-            const file = fileInput.files[0];
+       // Código para generar reporte de secciones SIN ACAP
+// Función para leer el archivo CSV cargado
+function processCSV1() {
+    const fileInput = document.getElementById('csvFileInput');
+    const file = fileInput.files[0];
 
-            if (!file) {
-                alert('Primero seleccionar archivo CSV.');
-                return;
+    if (!file) {
+        alert('Primero seleccionar archivo CSV.');
+        return;
+    }
+
+    return new Promise((resolve, reject) => {
+        Papa.parse(file, {
+            header: true,
+            complete: function(results) {
+                resolve(results.data);
+            },
+            error: function(error) {
+                reject(error);
             }
+        });
+    });
+}
 
-            return new Promise((resolve, reject) => {
-                Papa.parse(file, {
-                    header: true,
-                    complete: function(results) {
-                        resolve(results.data);
-                    },
-                    error: function(error) {
-                        reject(error);
-                    }
-                });
-            });
-        }
-
-        // Función para leer el archivo CSV desde el mismo directorio
-        function fetchCSVFile1() {
-            const url = 'todas-las-escuelas-y-secciones.csv';
-            return fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Error al cargar el archivo CSV");
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
-                });
-        }
-
-        // Función principal para generar el reporte
-        async function processCSVseccionesSinAcap() {
-            if (document.getElementById('csvFileInput').files.length === 0) {
-                alert("Por favor, cargue el archivo CSV de actividades.");
-                return;
+// Función para leer el archivo CSV desde el mismo directorio
+function fetchCSVFile1() {
+    const url = 'todas-las-escuelas-y-secciones.csv';
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al cargar el archivo CSV");
             }
+            return response.text();
+        })
+        .then(text => {
+            return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+        });
+}
 
-            try {
-                const escuelasData = await fetchCSVFile1(); // Nombre del archivo CSV de escuelas y secciones
-                const actividadesData = await processCSV1();
+// Función principal para generar el reporte
+async function processCSVseccionesSinAcap() {
+    if (document.getElementById('csvFileInput').files.length === 0) {
+        alert("Por favor, cargue el archivo CSV de actividades.");
+        return;
+    }
 
-                const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);
-                mostrarReporte1(reporte);
-            } catch (error) {
-                console.error(error);
-                alert("Error al obtener o procesar los archivos CSV.");
+    try {
+        const escuelasData = await fetchCSVFile1(); // Nombre del archivo CSV de escuelas y secciones
+        const actividadesData = await processCSV1();
+
+        const reporte = generarReporteActividadesFaltantes(escuelasData, actividadesData);
+        mostrarReporte1(reporte);
+    } catch (error) {
+        console.error(error);
+        alert("Error al obtener o procesar los archivos CSV.");
+    }
+}
+
+// Función para generar el reporte de actividades faltantes
+function generarReporteActividadesFaltantes(escuelas, actividades) {
+    const actividadesPorEscuelaSeccion = new Map();
+
+    actividades.forEach(actividad => {
+        const nombreEscuelaActividad = actividad.nombreEscuelaActividad ? actividad.nombreEscuelaActividad.trim() : '';
+        const seccionEscuelaActividad = actividad.seccionEscuelaActividad ? actividad.seccionEscuelaActividad.trim() : '';
+        const key = `${nombreEscuelaActividad}-${seccionEscuelaActividad}`;
+        if (!actividadesPorEscuelaSeccion.has(key)) {
+            actividadesPorEscuelaSeccion.set(key, []);
+        }
+        actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
+    });
+
+    const reporte = [];
+
+    escuelas.forEach(escuela => {
+        const nombreEscuela = escuela.nombreEscuela ? escuela.nombreEscuela.trim() : '';
+        const seccionEscuela = escuela.seccionEscuela ? escuela.seccionEscuela.trim() : '';
+        const key = `${nombreEscuela}-${seccionEscuela}`;
+        if (!actividadesPorEscuelaSeccion.has(key)) {
+            reporte.push({
+                nombreEscuela: escuela.nombreEscuela,
+                seccionEscuela: escuela.seccionEscuela,
+                actividadFaltante: true
+            });
+        }
+    });
+
+    return reporte;
+}
+
+// Función para mostrar el reporte en una tabla HTML
+function mostrarReporte1(reporte) {
+    const reportContainer = document.getElementById('output');
+    reportContainer.innerHTML = '';
+
+    const conteoFaltantes = reporte.length;
+
+    const conteoDiv = document.createElement('div');
+    conteoDiv.textContent = `Cantidad de escuelas y secciones que NO realizaron actividades ACAP: ${conteoFaltantes}`;
+    reportContainer.appendChild(conteoDiv);
+
+    if (reporte.length === 0) {
+        reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
+        return;
+    }
+
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+
+    const headerRow = document.createElement('tr');
+    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+
+    reporte.forEach(rowData => {
+        const row = document.createElement('tr');
+        const cellNombreEscuela = document.createElement('td');
+        const cellSeccionEscuela = document.createElement('td');
+        const cellActividadFaltante = document.createElement('td');
+
+        cellNombreEscuela.textContent = rowData.nombreEscuela;
+        cellSeccionEscuela.textContent = rowData.seccionEscuela;
+        cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+
+        row.appendChild(cellNombreEscuela);
+        row.appendChild(cellSeccionEscuela);
+        row.appendChild(cellActividadFaltante);
+
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    reportContainer.appendChild(table);
+
+    document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
+    document.getElementById('tituloDelReporte').style.visibility = 'visible';
+}
+// fin de código para secciones SIN ACAP
+
+// ************* Fin de código para generar reporte de secciones SIN ACAP **************
+
+
+//*******************************************************************************
+// ************* Código para generar reporte de secciones CON ACAP **************
+//*******************************************************************************
+
+// Función para leer el archivo CSV cargado
+function processCSV2() {
+    const fileInput = document.getElementById('csvFileInput');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert('Primero seleccionar archivo CSV.');
+        return;
+    }
+
+    return new Promise((resolve, reject) => {
+        Papa.parse(file, {
+            header: true,
+            complete: function(results) {
+                resolve(results.data);
+            },
+            error: function(error) {
+                reject(error);
             }
-        }
+        });
+    });
+}
 
-        // Función para generar el reporte de actividades faltantes
-        function generarReporteActividadesFaltantes(escuelas, actividades) {
-            const actividadesPorEscuelaSeccion = new Map();
-
-            actividades.forEach(actividad => {
-                const nombreEscuelaActividad = actividad.nombreEscuelaActividad ? actividad.nombreEscuelaActividad.trim() : '';
-                const seccionEscuelaActividad = actividad.seccionEscuelaActividad ? actividad.seccionEscuelaActividad.trim() : '';
-                const key = `${nombreEscuelaActividad}-${seccionEscuelaActividad}`;
-                if (!actividadesPorEscuelaSeccion.has(key)) {
-                    actividadesPorEscuelaSeccion.set(key, []);
-                }
-                actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
-            });
-
-            const reporte = [];
-
-            escuelas.forEach(escuela => {
-                const nombreEscuela = escuela.nombreEscuela ? escuela.nombreEscuela.trim() : '';
-                const seccionEscuela = escuela.seccionEscuela ? escuela.seccionEscuela.trim() : '';
-                const key = `${nombreEscuela}-${seccionEscuela}`;
-                if (!actividadesPorEscuelaSeccion.has(key)) {
-                    reporte.push({
-                        nombreEscuela: escuela.nombreEscuela,
-                        seccionEscuela: escuela.seccionEscuela,
-                        actividadFaltante: true
-                    });
-                }
-            });
-
-            return reporte;
-        }
-
-        // Función para mostrar el reporte en una tabla HTML
-        function mostrarReporte1(reporte) {
-            const reportContainer = document.getElementById('output');
-            reportContainer.innerHTML = '';
-
-            if (reporte.length === 0) {
-                reportContainer.textContent = 'Todas las secciones tienen actividades registradas.';
-                return;
+// Función para leer el archivo CSV desde el mismo directorio
+function fetchCSVFile2() {
+    const url = 'todas-las-escuelas-y-secciones.csv';
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al cargar el archivo CSV");
             }
+            return response.text();
+        })
+        .then(text => {
+            return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
+        });
+}
 
-            const table = document.createElement('table');
-            const thead = document.createElement('thead');
-            const tbody = document.createElement('tbody');
+// Función principal para generar el reporte
+async function processCSVseccionesConAcap() {
+    if (document.getElementById('csvFileInput').files.length === 0) {
+        alert("Por favor, cargue el archivo CSV de actividades.");
+        return;
+    }
 
-            const headerRow = document.createElement('tr');
-            const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Faltantes'];
-            headers.forEach(headerText => {
-                const th = document.createElement('th');
-                th.textContent = headerText;
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
+    try {
+        const escuelasData = await fetchCSVFile2(); // Nombre del archivo CSV de escuelas y secciones
+        const actividadesData = await processCSV2();
 
-            reporte.forEach(rowData => {
-                const row = document.createElement('tr');
-                const cellNombreEscuela = document.createElement('td');
-                const cellSeccionEscuela = document.createElement('td');
-                const cellActividadFaltante = document.createElement('td');
+        const reporte = generarReporteActividades(escuelasData, actividadesData);
+        mostrarReporte2(reporte, actividadesData.length);
+    } catch (error) {
+        console.error(error);
+        alert("Error al obtener o procesar los archivos CSV.");
+    }
+}
 
-                cellNombreEscuela.textContent = rowData.nombreEscuela;
-                cellSeccionEscuela.textContent = rowData.seccionEscuela;
-                cellActividadFaltante.textContent = rowData.actividadFaltante ? 'Sí' : 'No';
+// Función para generar el reporte de actividades
+function generarReporteActividades(escuelas, actividades) {
+    const actividadesPorEscuelaSeccion = new Map();
 
-                row.appendChild(cellNombreEscuela);
-                row.appendChild(cellSeccionEscuela);
-                row.appendChild(cellActividadFaltante);
-
-                tbody.appendChild(row);
-            });
-
-            table.appendChild(thead);
-            table.appendChild(tbody);
-            reportContainer.appendChild(table);
-
-            document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
-            document.getElementById('tituloDelReporte').style.visibility = 'visible';
+    actividades.forEach(actividad => {
+        const nombreEscuelaActividad = actividad.nombreEscuelaActividad ? actividad.nombreEscuelaActividad.trim() : '';
+        const seccionEscuelaActividad = actividad.seccionEscuelaActividad ? actividad.seccionEscuelaActividad.trim() : '';
+        const key = `${nombreEscuelaActividad}-${seccionEscuelaActividad}`;
+        if (!actividadesPorEscuelaSeccion.has(key)) {
+            actividadesPorEscuelaSeccion.set(key, { ids: [], horas: 0, orientacion: actividad['Ori-Ppal'] });
         }
+        actividadesPorEscuelaSeccion.get(key).ids.push(actividad.idActividad);
+        actividadesPorEscuelaSeccion.get(key).horas += parseFloat(actividad['hs-ACAP-x-est'] || 0);
+    });
 
-// Código para generar reporte de secciones CON ACAP
-        // Función para leer el archivo CSV cargado
-        function processCSV2() {
-            const fileInput = document.getElementById('csvFileInput');
-            const file = fileInput.files[0];
+    const reporte = [];
 
-            if (!file) {
-                alert('Primero seleccionar archivo CSV.');
-                return;
-            }
-
-            return new Promise((resolve, reject) => {
-                Papa.parse(file, {
-                    header: true,
-                    complete: function(results) {
-                        resolve(results.data);
-                    },
-                    error: function(error) {
-                        reject(error);
-                    }
-                });
+    escuelas.forEach(escuela => {
+        const nombreEscuela = escuela.nombreEscuela ? escuela.nombreEscuela.trim() : '';
+        const seccionEscuela = escuela.seccionEscuela ? escuela.seccionEscuela.trim() : '';
+        const key = `${nombreEscuela}-${seccionEscuela}`;
+        if (actividadesPorEscuelaSeccion.has(key)) {
+            reporte.push({
+                nombreEscuela: escuela.nombreEscuela,
+                seccionEscuela: escuela.seccionEscuela,
+                horasRealizadas: actividadesPorEscuelaSeccion.get(key).horas,
+                orientacion: actividadesPorEscuelaSeccion.get(key).orientacion,
+                actividadFaltante: false
             });
         }
+    });
 
-        // Función para leer el archivo CSV desde el mismo directorio
-        function fetchCSVFile2() {
-            const url = 'todas-las-escuelas-y-secciones.csv';
-            return fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Error al cargar el archivo CSV");
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    return Papa.parse(text, { header: true, skipEmptyLines: true }).data;
-                });
-        }
+    return reporte;
+}
 
-        // Función principal para generar el reporte
-        async function processCSVseccionesConAcap() {
-            if (document.getElementById('csvFileInput').files.length === 0) {
-                alert("Por favor, cargue el archivo CSV de actividades.");
-                return;
-            }
+// Función para mostrar el reporte en una tabla HTML
+function mostrarReporte2(reporte, totalActividades) {
+    const reportContainer = document.getElementById('output');
+    reportContainer.innerHTML = '';
 
-            try {
-                const escuelasData = await fetchCSVFile2(); // Nombre del archivo CSV de escuelas y secciones
-                const actividadesData = await processCSV2();
+    if (reporte.length === 0) {
+        reportContainer.textContent = 'No se encontraron secciones con actividades registradas.';
+        return;
+    }
 
-                const reporte = generarReporteActividades(escuelasData, actividadesData);
-                mostrarReporte2(reporte);
-            } catch (error) {
-                console.error(error);
-                alert("Error al obtener o procesar los archivos CSV.");
-            }
-        }
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
 
-        // Función para generar el reporte de actividades
-        function generarReporteActividades(escuelas, actividades) {
-            const actividadesPorEscuelaSeccion = new Map();
+    const headerRow = document.createElement('tr');
+    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Horas Realizadas', 'Orientación', 'Actividades Registradas'];
+    headers.forEach(headerText => {
+        const th = document.createElement('th');
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
 
-            actividades.forEach(actividad => {
-                const nombreEscuelaActividad = actividad.nombreEscuelaActividad ? actividad.nombreEscuelaActividad.trim() : '';
-                const seccionEscuelaActividad = actividad.seccionEscuelaActividad ? actividad.seccionEscuelaActividad.trim() : '';
-                const key = `${nombreEscuelaActividad}-${seccionEscuelaActividad}`;
-                if (!actividadesPorEscuelaSeccion.has(key)) {
-                    actividadesPorEscuelaSeccion.set(key, []);
-                }
-                actividadesPorEscuelaSeccion.get(key).push(actividad.idActividad);
-            });
+    reporte.forEach(rowData => {
+        const row = document.createElement('tr');
+        const cellNombreEscuela = document.createElement('td');
+        const cellSeccionEscuela = document.createElement('td');
+        const cellHorasRealizadas = document.createElement('td');
+        const cellOrientacion = document.createElement('td');
+        const cellActividadRegistrada = document.createElement('td');
 
-            const reporte = [];
+        cellNombreEscuela.textContent = rowData.nombreEscuela;
+        cellSeccionEscuela.textContent = rowData.seccionEscuela;
+        cellHorasRealizadas.textContent = rowData.horasRealizadas;
+        cellOrientacion.textContent = rowData.orientacion;
+        cellActividadRegistrada.textContent = rowData.actividadFaltante ? 'No' : 'Sí';
 
-            escuelas.forEach(escuela => {
-                const nombreEscuela = escuela.nombreEscuela ? escuela.nombreEscuela.trim() : '';
-                const seccionEscuela = escuela.seccionEscuela ? escuela.seccionEscuela.trim() : '';
-                const key = `${nombreEscuela}-${seccionEscuela}`;
-                if (actividadesPorEscuelaSeccion.has(key)) {
-                    reporte.push({
-                        nombreEscuela: escuela.nombreEscuela,
-                        seccionEscuela: escuela.seccionEscuela,
-                        actividadFaltante: false
-                    });
-                }
-            });
+        row.appendChild(cellNombreEscuela);
+        row.appendChild(cellSeccionEscuela);
+        row.appendChild(cellHorasRealizadas);
+        row.appendChild(cellOrientacion);
+        row.appendChild(cellActividadRegistrada);
 
-            return reporte;
-        }
+        tbody.appendChild(row);
+    });
 
-        // Función para mostrar el reporte en una tabla HTML
-        function mostrarReporte2(reporte) {
-            const reportContainer = document.getElementById('output');
-            reportContainer.innerHTML = '';
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    reportContainer.appendChild(table);
 
-            if (reporte.length === 0) {
-                reportContainer.textContent = 'No se encontraron secciones con actividades registradas.';
-                return;
-            }
-
-            const table = document.createElement('table');
-            const thead = document.createElement('thead');
-            const tbody = document.createElement('tbody');
-
-            const headerRow = document.createElement('tr');
-            const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Actividades Registradas'];
-            headers.forEach(headerText => {
-                const th = document.createElement('th');
-                th.textContent = headerText;
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
-
-            reporte.forEach(rowData => {
-                const row = document.createElement('tr');
-                const cellNombreEscuela = document.createElement('td');
-                const cellSeccionEscuela = document.createElement('td');
-                const cellActividadRegistrada = document.createElement('td');
-
-                cellNombreEscuela.textContent = rowData.nombreEscuela;
-                cellSeccionEscuela.textContent = rowData.seccionEscuela;
-                cellActividadRegistrada.textContent = rowData.actividadFaltante ? 'No' : 'Sí';
-
-                row.appendChild(cellNombreEscuela);
-                row.appendChild(cellSeccionEscuela);
-                row.appendChild(cellActividadRegistrada);
-
-                tbody.appendChild(row);
-            });
-
-            table.appendChild(thead);
-            table.appendChild(tbody);
-            reportContainer.appendChild(table);
-
-            document.getElementById('tituloDelReporte').innerHTML = "Secciones CON ACAP";
-            document.getElementById('tituloDelReporte').style.visibility = 'visible';
-        }
-        // fin de código para secciones CON ACAP
+    document.getElementById('tituloDelReporte').innerHTML = `Secciones CON ACAP - Total de actividades realizadas: ${totalActividades}`;
+    document.getElementById('tituloDelReporte').style.visibility = 'visible';
+}
+// ************* Fin de código para generar reporte de secciones CON ACAP **************
