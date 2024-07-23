@@ -631,7 +631,7 @@ function mostrarReporte1(reporte) {
     const conteoFaltantes = reporte.length;
 
     const conteoDiv = document.createElement('div');
-    conteoDiv.textContent = `Cantidad de escuelas y secciones que NO realizaron actividades ACAP: ${conteoFaltantes}`;
+    //conteoDiv.textContent = `Cantidad de escuelas y secciones que NO realizaron actividades ACAP: ${conteoFaltantes}`;
     reportContainer.appendChild(conteoDiv);
 
     if (reporte.length === 0) {
@@ -673,7 +673,10 @@ function mostrarReporte1(reporte) {
     table.appendChild(tbody);
     reportContainer.appendChild(table);
 
-    document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP)";
+    //document.getElementById('tituloDelReporte').innerHTML = "Secciones faltantes (sin ACAP): " ;
+    //document.getElementById('tituloDelReporte').style.visibility = 'visible';
+
+    document.getElementById('tituloDelReporte').innerHTML = `Secciones SIN ACAP - Total de secciones faltantes: ${conteoFaltantes}`;
     document.getElementById('tituloDelReporte').style.visibility = 'visible';
 }
 // fin de código para secciones SIN ACAP
