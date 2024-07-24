@@ -200,6 +200,7 @@ function displayActivitiesAcapEnCurso(activities) {
     output.appendChild(table);
 }
 
+// función para listar las ACAP finalizadas
 function displayActivitiesAcapFinalizadas(activities) {
     const output = document.getElementById('output');
     output.innerHTML = '';
@@ -239,7 +240,7 @@ function displayActivitiesAcapFinalizadas(activities) {
     const tfoot = document.createElement('tfoot');
 
     // Crear encabezados de tabla
-    const headers = ['ID', 'Organización', 'Fecha inicio', 'Fecha fin', 'Estudiantes'];
+    const headers = ['ID', 'Organización', 'Fecha inicio', 'Fecha fin', 'Escuela', 'Sección', 'Orientación ACAP', 'Estudiantes'];
     const trHeader = document.createElement('tr');
     headers.forEach(header => {
         const th = document.createElement('th');
@@ -255,18 +256,27 @@ function displayActivitiesAcapFinalizadas(activities) {
         const tdOrg = document.createElement('td');
         const tdStartDate = document.createElement('td');
         const tdEndDate = document.createElement('td');
+        const tdNombreEscuela = document.createElement('td');
+        const tdSeccionEscuela = document.createElement('td');
+        const tdOrientacionACAP = document.createElement('td');
         const tdParticipants = document.createElement('td');
 
         tdName.innerText = activity['idActividad'] || 'Unnamed Activity';
         tdOrg.innerText = activity['organizacion'] || 'Unknown Organization';
         tdStartDate.innerText = activity['fecha-inicio'];
         tdEndDate.innerText = activity['fecha-fin'];
+        tdNombreEscuela.innerText = activity['nombreEscuelaActividad'];
+        tdSeccionEscuela.innerText = activity['seccionEscuelaActividad'];
+        tdOrientacionACAP.innerText = activity['Ori-Ppal'];
         tdParticipants.innerText = activity['cupo-asig'];
 
         tr.appendChild(tdName);
         tr.appendChild(tdOrg);
         tr.appendChild(tdStartDate);
         tr.appendChild(tdEndDate);
+        tr.appendChild(tdNombreEscuela);
+        tr.appendChild(tdSeccionEscuela);
+        tr.appendChild(tdOrientacionACAP);
         tr.appendChild(tdParticipants);
         tbody.appendChild(tr);
     });
@@ -945,7 +955,7 @@ function mostrarReporte2(reporte, totalActividades) {
     const tbody = document.createElement('tbody');
 
     const headerRow = document.createElement('tr');
-    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Horas Realizadas', 'Orientación ACAP', 'Orientación', 'Matrícula', 'Actividades Registradas'];
+    const headers = ['Nombre de la Escuela', 'Sección de la Escuela', 'Horas Realizadas', 'Orientación ACAP', 'Orientación sección', 'Matrícula', 'Actividades Registradas'];
     headers.forEach(headerText => {
         const th = document.createElement('th');
         th.textContent = headerText;
