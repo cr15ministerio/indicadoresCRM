@@ -1,0 +1,505 @@
+nombreEscuela,seccionEscuela,orientacionSeccion,matriculaSeccion
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°1° TM,Cs. Naturales,28
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°1° TT,Cs. Soc y Humanidades,21
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°2° TM,Cs. Soc y Humanidades,30
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°2° TT,Cs. Soc y Humanidades,20
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°3° TM,Cs. Naturales,30
+Colegio Nº 01 DE 03 Bernardino Rivadavia,5°3° TT,Cs. Naturales,15
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°1° TM,Informática,22
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°1° TT,Cs. Naturales,34
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°1° TV/TN,Turismo,
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°2° TM,Cs. Naturales,17
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°2° TT,Economía y Administración,18
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°2° TV/TN,Turismo,
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°3° TM,Cs. Naturales,22
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°4° TM,Economía y Administración,21
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°5° TM,Economía y Administración,15
+Colegio Nº 02 DE 01 Domingo Faustino Sarmiento,5°5° TV/TN,Turismo,
+Colegio Nº 03 DE 02 Mariano Moreno,5°1° TM,Cs. Naturales,24
+Colegio Nº 03 DE 02 Mariano Moreno,5°2° TM,Matemática y Física,25
+Colegio Nº 03 DE 02 Mariano Moreno,5°3° TM,Literatura,22
+Colegio Nº 03 DE 02 Mariano Moreno,5°4° TM,Cs. Soc y Humanidades,26
+Colegio Nº 03 DE 02 Mariano Moreno,5°6° TT,Cs. Naturales,26
+Colegio Nº 03 DE 02 Mariano Moreno,5°7° TT,Matemática y Física,18
+Colegio Nº 03 DE 02 Mariano Moreno,5°8° TT,Literatura,18
+Colegio Nº 03 DE 02 Mariano Moreno,5°9° TT,Cs. Soc y Humanidades,17
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°1° TM,Cs. Soc y Humanidades,42
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°1° TT,Cs. Soc y Humanidades,27
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°1° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°2° TM,Cs. Naturales,17
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°2° TT,Cs. Naturales,26
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°2° TV/TN,Cs. Naturales,
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°3° TM,Literatura,20
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°3° TT,Literatura,12
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°4° TM,Cs. Soc y Humanidades,17
+Colegio Nº 04 DE 09 Nicolás Avellaneda,5°4° TT,Cs. Soc y Humanidades,20
+Colegio Nº 05 DE 02 Bartolomé Mitre,5°1° TM,Cs. Soc y Humanidades,25
+Colegio Nº 05 DE 02 Bartolomé Mitre,5°1° TT,Turismo,21
+Colegio Nº 05 DE 02 Bartolomé Mitre,5°2° TM,Turismo,20
+Colegio Nº 05 DE 02 Bartolomé Mitre,5°2° TT,Cs. Soc y Humanidades,20
+Colegio Nº 06 DE 02 Manuel Belgrano,5°1° TM,Cs. Soc y Humanidades,25
+Colegio Nº 06 DE 02 Manuel Belgrano,5°1° TT,Cs. Soc y Humanidades,14
+Colegio Nº 06 DE 02 Manuel Belgrano,5°2° TM,Ed. Física,35
+Colegio Nº 06 DE 02 Manuel Belgrano,5°2° TT,Ed. Física,24
+Colegio Nº 06 DE 02 Manuel Belgrano,5°3° TM,Cs. Soc y Humanidades,19
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°1° TM,Cs. Soc y Humanidades,24
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°1° TT,Cs. Soc y Humanidades,20
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°1° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°2° TM,Cs. Naturales,28
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°2° TT,Cs. Soc y Humanidades,19
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°2° TV/TN,Cs. Naturales,
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°3° TM,Cs. Soc y Humanidades,20
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°3° TT,Economía y Administración,17
+Colegio Nº 07 DE 03 Juan Martín de Pueyrredon,5°3° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°1° TM,Cs. Soc y Humanidades,19
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°1° TT,Cs. Soc y Humanidades,17
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°2° TM,Cs. Soc y Humanidades,18
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°2° TT,Artes Visuales,18
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°3° TM,Cs. Soc y Humanidades,18
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°3° TT,Cs. Soc y Humanidades,23
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°4° TM,Artes Visuales,24
+Colegio Nº 08 DE 10 Julio Argentino Roca,5°5° TM,Cs. Soc y Humanidades,23
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°1° TM,Cs. Naturales,19
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°1° TT,Cs. Soc y Humanidades,18
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°1° TV/TN,Cs. Naturales,
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°2° TM,Cs. Naturales,21
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°2° TT,Cs. Naturales,21
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°2° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°3° TM,Cs. Soc y Humanidades,14
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°3° TV/TN,Artes Visuales,
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°4° TM,Artes Visuales,19
+Colegio Nº 09 DE 12 Justo José De Urquiza,5°4° TT,Artes Visuales,14
+Colegio Nº 10 DE 08 José De San Martín,5°1° TM,Cs. Soc y Humanidades,18
+Colegio Nº 10 DE 08 José De San Martín,5°1° TT,Cs. Soc y Humanidades,13
+Colegio Nº 10 DE 08 José De San Martín,5°2° TM,Cs. Soc y Humanidades,28
+Colegio Nº 10 DE 08 José De San Martín,5°2° TT,Cs. Soc y Humanidades,12
+Colegio Nº 10 DE 08 José De San Martín,5°3° TM,Economía y Administración,16
+Colegio Nº 10 DE 08 José De San Martín,5°3° TT,Economía y Administración,13
+Colegio Nº 11 DE 04 Hipólito Yrigoyen,5°1° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 11 DE 04 Hipólito Yrigoyen,5°2° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 11 DE 04 Hipólito Yrigoyen,5°3° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 11 DE 04 Hipólito Yrigoyen,5°4° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 12 DE 15 Reconquista,5°1° TM,Turismo,16
+Colegio Nº 12 DE 15 Reconquista,5°2° TM,Informática,14
+Colegio Nº 12 DE 15 Reconquista,5°3° TM,Turismo,13
+Colegio Nº 12 DE 15 Reconquista,5°4° TM,Cs. Soc y Humanidades,17
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°1° TM,Comunicación,14
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°1° TT,Economía y Administración,14
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°1° TT,Comunicación,14
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°2° TM,Comunicación,13
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°2° TT,Economía y Administración,17
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°3° TM,Economía y Administración,19
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°4° TM,Economía y Administración,20
+Colegio Nº 13 DE 18 Cnel. Tomás Espora,5°4° TT,Comunicación,17
+Colegio Nº 14 DE 02 Juan José Paso,5°1° TV/TN,Cs. Naturales,
+Colegio Nº 14 DE 02 Juan José Paso,5°2° TV/TN,Cs. Naturales,
+Colegio Nº 14 DE 02 Juan José Paso,5°3° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 14 DE 02 Juan José Paso,5°4° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 15 DE 02 Revolución de Mayo,5°1° TV/TN,Cs. Naturales,
+Colegio Nº 15 DE 02 Revolución de Mayo,5°2° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 15 DE 02 Revolución de Mayo,5°3° TV/TN,Cs. Naturales,
+Colegio Nº 16 DE 15 Guillermo Rawson,5°1° TV/TN,Cs. Soc y Humanidades,
+Colegio Nº 16 DE 15 Guillermo Rawson,5°2° TV/TN,Cs. Naturales,
+Colegio Nº 16 DE 15 Guillermo Rawson,PLAN 5810,PLAN 5810/19,
+Colegio Nº 17 DE 07 Primera Junta,5°1° TM,Cs. Soc y Humanidades,21
+Colegio Nº 17 DE 07 Primera Junta,5°2° TM,Cs. Naturales,22
+Colegio Nº 17 DE 07 Primera Junta,5°3° TM,Cs. Soc y Humanidades,23
+Colegio Nº 17 DE 07 Primera Junta,5°4° TM,Cs. Naturales,22
+Colegio Nº 18 DE 18 Dr. Alberto Larroque,5°1° TM,Economía y Administración,20
+Colegio Nº 18 DE 18 Dr. Alberto Larroque,5°1° TT,Cs. Soc y Humanidades,21
+Colegio Nº 18 DE 18 Dr. Alberto Larroque,5°2° TM,Cs. Soc y Humanidades,28
+Colegio Nº 18 DE 18 Dr. Alberto Larroque,5°2° TT,Economía y Administración,21
+Colegio Nº 18 DE 18 Dr. Alberto Larroque,5°3° TM,Economía y Administración,23
+Colegio Nº 19 DE 17 Luis Pasteur,5°1° TM,Cs. Naturales,22
+Colegio Nº 19 DE 17 Luis Pasteur,5°2° TM,Cs. Soc y Humanidades,18
+Colegio Nº 19 DE 17 Luis Pasteur,5°3° TM,Cs. Soc y Humanidades,22
+Colegio Nº 19 DE 17 Luis Pasteur,5°4° TT,Cs. Naturales,20
+Colegio Nº 19 DE 17 Luis Pasteur,5°5° TT,Cs. Soc y Humanidades,16
+Colegio Nº 19 DE 17 Luis Pasteur,5°6° TT,Cs. Soc y Humanidades,20
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°1° TM,Economía y Administración VIOLETA,23
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°1° TT,Economía y Administración,33
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°2° TM,Turismo,51
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°3° TM,Economía y Administración,23
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°4° TM,Economía y Administración,21
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,5°4° TT,Turismo,41
+Esc. de Comercio Nº 01 DE 04 Joaquín V. Gonzalez,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°1° TM,Economía y Administración,28
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°1° TT,Economía y Administración,19
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°2° TM,Economía y Administración,20
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°2° TT,Economía y Administración,18
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°3° TM,Economía y Administración,24
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°3° TT,Economía y Administración,22
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,5°4° TM,Economía y Administración,23
+Esc. de Comercio Nº 02 DE 01 Dr. Antonio Bermejo,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°1° TM,Economía y Administración,29
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°1° TT,Economía y Administración,22
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°2° TM,Turismo,28
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°2° TT,Turismo,35
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°3° TM,Economía y Administración,18
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°3° TT,Economía y Administración,23
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°4° TM,Turismo,30
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,5°5° TM,Economía y Administración,20
+Esc. de Comercio Nº 03 DE 07 Hipólito Vieytes,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 04 DE 04 Baldomero Fernández Moreno,5°1° TT,Economía y Administración,19
+Esc. de Comercio Nº 04 DE 04 Baldomero Fernández Moreno,5°2° TT,Economía y Administración,12
+Esc. de Comercio Nº 04 DE 04 Baldomero Fernández Moreno,5°3° TT,Economía y Administración,14
+Esc. de Comercio Nº 04 DE 04 Baldomero Fernández Moreno,5°4° TT,Economía y Administración,19
+Esc. de Comercio Nº 05 DE 03 José De San Martín,5°1° TM,Economía y Administración,17
+Esc. de Comercio Nº 05 DE 03 José De San Martín,5°2° TM,Economía y Administración,13
+Esc. de Comercio Nº 05 DE 03 José De San Martín,5°3° TM,Economía y Administración,15
+Esc. de Comercio Nº 05 DE 03 José De San Martín,5°4° TM,Economía y Administración,15
+Esc. de Comercio Nº 05 DE 03 José De San Martín,5°5° TM,Informática,21
+Esc. de Comercio Nº 06 DE 13 América,5°1° TM,Economía y Administración,32
+Esc. de Comercio Nº 06 DE 13 América,5°2° TT,Economía y Administración,28
+Esc. de Comercio Nº 06 DE 13 América,5°3° TT,Economía y Administración,27
+Esc. de Comercio Nº 06 DE 13 América,5°4° TM,Economía y Administración,31
+Esc. de Comercio Nº 06 DE 13 América,5°5° TM,Economía y Administración,31
+Esc. de Comercio Nº 06 DE 13 América,5°6° TT,Economía y Administración,29
+Esc. de Comercio Nº 07 DE 10 Manuel Belgrano,5°1° TM,Economía y Administración,25
+Esc. de Comercio Nº 07 DE 10 Manuel Belgrano,5°1° TT,Economía y Administración,25
+Esc. de Comercio Nº 07 DE 10 Manuel Belgrano,5°2° TM,Economía y Administración,22
+Esc. de Comercio Nº 07 DE 10 Manuel Belgrano,5°2° TT,Turismo,13
+Esc. de Comercio Nº 07 DE 10 Manuel Belgrano,5°3° TM,Turismo,22
+Esc. de Comercio Nº 08 DE 02 Patricias Argentinas,5°1° TT,Economía y Administración,25
+Esc. de Comercio Nº 08 DE 02 Patricias Argentinas,5°2° TT,Economía y Administración,23
+Esc. de Comercio Nº 08 DE 02 Patricias Argentinas,5°4° TT,Cs. Soc y Humanidades,29
+Esc. de Comercio Nº 09 DE 11 José Ingenieros,5°1° TM,Economía y Administración,27
+Esc. de Comercio Nº 09 DE 11 José Ingenieros,5°1° TT,Economía y Administración,19
+Esc. de Comercio Nº 09 DE 11 José Ingenieros,5°2° TM,Economía y Administración,23
+Esc. de Comercio Nº 09 DE 11 José Ingenieros,5°2° TT,Economía y Administración,22
+Esc. de Comercio Nº 09 DE 11 José Ingenieros,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 10 DE 01 Islas Malvinas,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 11 DE 17 Dr. José Peralta,5°1° TM,Turismo,28
+Esc. de Comercio Nº 11 DE 17 Dr. José Peralta,5°1° TT,Economía y Administración,23
+Esc. de Comercio Nº 11 DE 17 Dr. José Peralta,5°2° TM,Economía y Administración,28
+Esc. de Comercio Nº 11 DE 17 Dr. José Peralta,5°2° TT,Turismo,21
+Esc. de Comercio Nº 11 DE 17 Dr. José Peralta,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°1° TM,Economía y Administración,22
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°1° TT,Economía y Administración,29
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°2° TM,Economía y Administración,31
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°2° TT,Economía y Administración,24
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°3° TM,Economía y Administración,29
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,5°3° TT,Economía y Administración,28
+Esc. de Comercio Nº 12 DE 21 Juan XXIII,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°1° TM,Economía y Administración,20
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°1° TT,Economía y Administración,20
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°2° TM,Economía y Administración,17
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°2° TT,Economía y Administración,18
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°3° TM,Cs. Soc y Humanidades,23
+Esc. de Comercio Nº 15 DE 15 Dra. Cecilia Grierson,5°3° TT,Cs. Soc y Humanidades,10
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°1° TM,Economía y Administración,24
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°1° TT,Economía y Administración,24
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°2° TM,Economía y Administración,26
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°2° TT,Economía y Administración,24
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°3° TM,Economía y Administración,5
+Esc. de Comercio Nº 16 DE 07 Gabriela Mistral,5°3° TT,Economía y Administración,2
+Esc. de Comercio Nº 17 DE 07 Santa María De Los Buenos Aires,5°1° TM,Economía y Administración,27
+Esc. de Comercio Nº 17 DE 07 Santa María De Los Buenos Aires,5°1° TT,Economía y Administración,22
+Esc. de Comercio Nº 17 DE 07 Santa María De Los Buenos Aires,5°1° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 17 DE 07 Santa María De Los Buenos Aires,5°2° TM,Economía y Administración,26
+Esc. de Comercio Nº 17 DE 07 Santa María De Los Buenos Aires,5°2° TT,Economía y Administración,19
+Esc. de Comercio Nº 18 DE 05 Reino de Suecia,5°1° TM,Economía y Administración,20
+Esc. de Comercio Nº 18 DE 05 Reino de Suecia,5°1° TT,Economía y Administración,23
+Esc. de Comercio Nº 18 DE 05 Reino de Suecia,5°2° TM,Economía y Administración,23
+Esc. de Comercio Nº 18 DE 05 Reino de Suecia,5°2° TT,Economía y Administración,24
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°1° TM,Cs. Soc y Humanidades,23
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°2° TM,Economía y Administración,27
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°2° TT,Economía y Administración,18
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°3° TM,Cs. Soc y Humanidades,27
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°3° TT,Economía y Administración,15
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°4° TM,Economía y Administración,25
+Esc. de Comercio Nº 19 DE 08 Juan Montalvo,5°4° TT,Cs. Soc y Humanidades,27
+Esc. de Comercio Nº 20 DE 14 Dr. Juan Agustín García,5°1° TM,Economía y Administración,19
+Esc. de Comercio Nº 20 DE 14 Dr. Juan Agustín García,5°2° TT,Economía y Administración,17
+Esc. de Comercio Nº 20 DE 14 Dr. Juan Agustín García,5°3° TM,Economía y Administración,18
+Esc. de Comercio Nº 21 DE 11 Cap. de Navío Hipólito Bouchard,5°1° TM,Economía y Administración,16
+Esc. de Comercio Nº 21 DE 11 Cap. de Navío Hipólito Bouchard,5°1° TT,Economía y Administración,16
+Esc. de Comercio Nº 21 DE 11 Cap. de Navío Hipólito Bouchard,5°2° TM,Economía y Administración,22
+Esc. de Comercio Nº 21 DE 11 Cap. de Navío Hipólito Bouchard,5°2° TT,Economía y Administración,14
+Esc. de Comercio Nº 21 DE 11 Cap. de Navío Hipólito Bouchard,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 22 DE 06 Gustavo Adolfo Martinez Zuviría,5°1° TT,Economía y Administración,21
+Esc. de Comercio Nº 22 DE 06 Gustavo Adolfo Martinez Zuviría,5°2° TM,Informática,18
+Esc. de Comercio Nº 22 DE 06 Gustavo Adolfo Martinez Zuviría,5°3° TM,Economía y Administración,23
+Esc. de Comercio Nº 22 DE 06 Gustavo Adolfo Martinez Zuviría,5°4° TT,Informática,22
+Esc. de Comercio Nº 23 DE 07 Dr. Luis Agote,5°1° TT,Economía y Administración,27
+Esc. de Comercio Nº 23 DE 07 Dr. Luis Agote,5°2° TT,Economía y Administración,23
+Esc. de Comercio Nº 23 DE 07 Dr. Luis Agote,5°3° TT,Artes Visuales,25
+Esc. de Comercio Nº 24 DE 14 Dr. Dalmacio Vélez Sarsfield,5°1° TM,Economía y Administración,18
+Esc. de Comercio Nº 24 DE 14 Dr. Dalmacio Vélez Sarsfield,5°1° TT,Economía y Administración,18
+Esc. de Comercio Nº 24 DE 14 Dr. Dalmacio Vélez Sarsfield,5°2° TM,Economía y Administración,18
+Esc. de Comercio Nº 25 DE 02 Santiago de Liniers,5°1° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 25 DE 02 Santiago de Liniers,5°2° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 25 DE 02 Santiago de Liniers,5°3° TV/TN,Cs. Soc y Humanidades,
+Esc. de Comercio Nº 26 DE 01 Enrique de Vedia,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 27 DE 04 Antártida Argentina,5°1° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 27 DE 04 Antártida Argentina,5°2° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 28 DE 15 Abraham Lincoln,5°1° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 28 DE 15 Abraham Lincoln,5°2° TV/TN,Economía y Administración,
+Esc. de Comercio Nº 29 DE 07 Marina Mercante Argentina,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°1° TM,Economía y Administración,22
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°1° TT,Economía y Administración,14
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°2° TM,Economía y Administración,23
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°2° TT,Economía y Administración,17
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°3° TM,Economía y Administración,21
+Esc. de Comercio Nº 30 DE 18 Dr. Esteban Agustín Gascon,5°3° TT,Economía y Administración,15
+Esc. de Comercio Nº 31 DE 09 Naciones Unidas,5°1° TM,Economía y Administración,28
+Esc. de Comercio Nº 31 DE 09 Naciones Unidas,5°1° TT,Economía y Administración,22
+Esc. de Comercio Nº 31 DE 09 Naciones Unidas,5°2° TM,Informática,29
+Esc. de Comercio Nº 31 DE 09 Naciones Unidas,5°2° TT,Informática,12
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°1° TM,Economía y Administración,26
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°2° TM,Economía y Administración,24
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°3° TT,Economía y Administración,21
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°4° TT,Economía y Administración,16
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°5° TM,Economía y Administración,25
+Esc. de Comercio Nº 32 DE 13 José León Suarez,5°6° TT,Economía y Administración,20
+Esc. de Comercio Nº 33 DE 18 Maipú,5°1° TM,Economía y Administración,26
+Esc. de Comercio Nº 33 DE 18 Maipú,5°1° TT,Economía y Administración,17
+Esc. de Comercio Nº 33 DE 18 Maipú,5°2° TM,Economía y Administración,24
+Esc. de Comercio Nº 33 DE 18 Maipú,5°2° TT,Economía y Administración,17
+Esc. de Comercio Nº 34 DE 03 Monseñor Miguel De Andrea,5°1° TM,Economía y Administración,22
+Esc. de Comercio Nº 34 DE 03 Monseñor Miguel De Andrea,5°1° TT,Economía y Administración,20
+Esc. de Comercio Nº 34 DE 03 Monseñor Miguel De Andrea,5°2° TM,Economía y Administración,24
+Esc. de Comercio Nº 34 DE 03 Monseñor Miguel De Andrea,5°2° TT,Economía y Administración,18
+Esc. de Comercio Nº 35 DE 21 Leopoldo Marechal,5°1° TM,Economía y Administración,37
+Esc. de Comercio Nº 35 DE 21 Leopoldo Marechal,5°2° TM,Economía y Administración,31
+Esc. de Comercio Nº 35 DE 21 Leopoldo Marechal,5°3° TT,Economía y Administración,21
+Esc. de Comercio Nº 35 DE 21 Leopoldo Marechal,5°4° TT,Economía y Administración,23
+Esc. de Comercio Nº 35 DE 21 Leopoldo Marechal,PLAN 5810,PLAN 5810/19,
+Esc. de Comercio Nº 36 DE 03 Isaac Halperin,PLAN 5810,PLAN 5810/19,
+Esc. de Educación Media Nº 01 DE 07 Julieta Lanteri,5°1° TM,Comunicación,17
+Esc. de Educación Media Nº 01 DE 12 Julio Cortazar,5°1° TM,Comunicación,26
+Esc. de Educación Media Nº 01 DE 12 Julio Cortazar,5°2° TM,Comunicación,28
+Esc. de Educación Media Nº 01 DE 12 Julio Cortazar,5°3° TT,Comunicación,26
+Esc. de Educación Media Nº 01 DE 12 Julio Cortazar,5°4° TT,Comunicación,23
+Esc. de Educación Media Nº 01 DE 13 Manuel Mujica Lainez,5°1° TV/TN,Comunicación,
+Esc. de Educación Media Nº 01 DE 13 Manuel Mujica Lainez,5°2° TV/TN,Comunicación,
+Esc. de Educación Media Nº 01 DE 14 Federico García Lorca,5°1° TT,Economía y Administración,22
+Esc. de Educación Media Nº 01 DE 14 Federico García Lorca,5°2° TM,Economía y Administración,21
+Esc. de Educación Media Nº 01 DE 14 Federico García Lorca,5°3° TM,Cs. Soc y Humanidades,25
+Esc. de Educación Media Nº 01 DE 16 Rodolfo Walsh,5°1° TM,Comunicación,22
+Esc. de Educación Media Nº 01 DE 16 Rodolfo Walsh,5°2° TT,Comunicación,20
+Esc. de Educación Media Nº 01 DE 16 Rodolfo Walsh,5°3° TM,Comunicación,22
+Esc. de Educación Media Nº 01 DE 20 Biblioteca del Congreso de la Nación,5°A TV,Economía y Administración,
+Esc. de Educación Media Nº 01 DE 20 Biblioteca del Congreso de la Nación,5°B TV,Economía y Administración,
+Esc. de Educación Media Nº 01 DE 20 Biblioteca del Congreso de la Nación,5°C TM,Artes Visuales,9
+Esc. de Educación Media Nº 01 DE 20 Biblioteca del Congreso de la Nación,5°D TM,Artes Visuales,16
+Esc. de Educación Media Nº 01 DE 21,5°1° TT,Cs. Naturales,20
+Esc. de Educación Media Nº 01 DE 21,5°2° TT,Cs. Naturales,20
+Esc. de Educación Media Nº 01 DE 21,5°3° TT,Cs. Naturales,21
+Esc. de Educación Media Nº 01 DE 21,5°A TM,Cs. Naturales,27
+Esc. de Educación Media Nº 01 DE 21,5°B TM,Cs. Naturales,20
+Esc. de Educación Media Nº 01 DE 21,5°C TM,Cs. Naturales,27
+Esc. de Educación Media Nº 02 DE 13,5°1° TM,Agro y Ambiente,19
+Esc. de Educación Media Nº 02 DE 13,5°2° TM,Agro y Ambiente,16
+Esc. de Educación Media Nº 02 DE 14 Argentinos Juniors,5°1° TM,Comunicación,24
+Esc. de Educación Media Nº 02 DE 14 Argentinos Juniors,5°2° TT,Comunicación,23
+Esc. de Educación Media Nº 02 DE 16 Agustín Tosco,5°1° TM,Cs. Soc y Humanidades,19
+Esc. de Educación Media Nº 02 DE 16 Agustín Tosco,5°2° TM,Cs. Soc y Humanidades,22
+Esc. de Educación Media Nº 02 DE 16 Agustín Tosco,5°3° TT,Cs. Soc y Humanidades,32
+Esc. de Educación Media Nº 02 DE 17 Rumania,5°1° TM,Economía y Administración,14
+Esc. de Educación Media Nº 02 DE 17 Rumania,5°2° TM,Comunicación,24
+Esc. de Educación Media Nº 02 DE 17 Rumania,5°3° TT,Economía y Administración,15
+Esc. de Educación Media Nº 02 DE 17 Rumania,5°4° TT,Comunicación,16
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°1° TM,Comunicación,27
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°1° TT,Comunicación,21
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°1° TV/TN,Comunicación,
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°2° TM,Economía y Administración,35
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°2° TT,Economía y Administración,20
+Esc. de Educación Media Nº 02 DE 19 Arturo Jauretche,5°2° TV/TN,Comunicación,
+Esc. de Educación Media Nº 02 DE 20,5°1° TM,Cs. Soc y Humanidades,27
+Esc. de Educación Media Nº 02 DE 20,5°2° TT,Cs. Soc y Humanidades,21
+Esc. de Educación Media Nº 02 DE 20,5°3° TM,Turismo,23
+Esc. de Educación Media Nº 02 DE 20,5°4° TT,Turismo,24
+Esc. de Educación Media Nº 03 DE 04,5°1° TM,Cs. Soc y Humanidades,24
+Esc. de Educación Media Nº 03 DE 04,5°1° TT,Cs. Soc y Humanidades,22
+Esc. de Educación Media Nº 03 DE 04,5°2° TM,Cs. Soc y Humanidades,24
+Esc. de Educación Media Nº 03 DE 04,5°2° TT,Cs. Soc y Humanidades,21
+Esc. de Educación Media Nº 03 DE 07 Osvaldo Pugliese,5°1° TM,Comunicación,19
+Esc. de Educación Media Nº 03 DE 07 Osvaldo Pugliese,5°2° TM,Artes Visuales,22
+Esc. de Educación Media Nº 03 DE 10,5°1° TT,Cs. Soc y Humanidades,19
+Esc. de Educación Media Nº 03 DE 10,5°2° TT,Cs. Soc y Humanidades,21
+Esc. de Educación Media Nº 03 DE 17 Antonio Devoto,5°1° TM,Economía y Administración,25
+Esc. de Educación Media Nº 03 DE 17 Antonio Devoto,5°2° TM,Economía y Administración,27
+Esc. de Educación Media Nº 03 DE 17 Antonio Devoto,5°3° TT,Economía y Administración,20
+Esc. de Educación Media Nº 03 DE 17 Antonio Devoto,5°4° TT,Economía y Administración,16
+Esc. de Educación Media Nº 03 DE 19 Prof. Carlos Geniso,5°1° TM,Comunicación,22
+Esc. de Educación Media Nº 03 DE 19 Prof. Carlos Geniso,5°2° TT,Economía y Administración,12
+Esc. de Educación Media Nº 03 DE 19 Prof. Carlos Geniso,5°3° TM,Economía y Administración,22
+Esc. de Educación Media Nº 03 DE 19 Prof. Carlos Geniso,5°4° TT,Comunicación,12
+Esc. de Educación Media Nº 03 DE 19 Prof. Carlos Geniso,5°7° TV/TN,Comunicación,
+Esc. de Educación Media Nº 04 DE 19 Homero Manzi,5°1° TM,Cs. Soc y Humanidades,19
+Esc. de Educación Media Nº 04 DE 19 Homero Manzi,5°2° TM,Cs. Soc y Humanidades,19
+Esc. de Educación Media Nº 04 DE 19 Homero Manzi,5°3° TT,Cs. Soc y Humanidades,24
+Esc. de Educación Media Nº 04 DE 19 Homero Manzi,5°4° TT,Cs. Soc y Humanidades,26
+Esc. de Educación Media Nº 04 DE 21,5°A TV,Cs. Soc y Humanidades,
+Esc. de Educación Media Nº 04 DE 21,5°B TV,Economía y Administración,
+Esc. de Educación Media Nº 05 DE 10 Héroes de Malvinas,5°1° TM,Economía y Administración,24
+Esc. de Educación Media Nº 05 DE 10 Héroes de Malvinas,5°2° TM,Economía y Administración,26
+Esc. de Educación Media Nº 05 DE 10 Héroes de Malvinas,5°3° TT,Economía y Administración,21
+Esc. de Educación Media Nº 05 DE 15 Mons. Enrique Angelelli,5°3° TM,Economía y Administración,24
+Esc. de Educación Media Nº 05 DE 15 Mons. Enrique Angelelli,5°3° TT,Ed. Física,18
+Esc. de Educación Media Nº 05 DE 19,5°1° TT,Informática,23
+Esc. de Educación Media Nº 05 DE 19,5°2° TT,Informática,21
+Esc. de Educación Media Nº 05 DE 21 Juan Manuel Fangio,5°1° TV/TN,Economía y Administración,
+Esc. de Educación Media Nº 05 DE 21 Juan Manuel Fangio,5°2° TV/TN,Economía y Administración,
+Esc. de Educación Media Nº 06 DE 01 Padre Carlos Mugica,5°1° TV/TN,Economía y Administración,
+Esc. de Educación Media Nº 06 DE 01 Padre Carlos Mugica,5°1° TV/TN,Economía y Administración,
+Esc. de Educación Media Nº 06 DE 01 Padre Carlos Mugica,5°A TM,Cs. Soc y Humanidades,20
+Esc. de Educación Media Nº 06 DE 01 Padre Carlos Mugica,5°B TM,Cs. Soc y Humanidades,18
+Esc. dE Educación Media Nº 06 DE 05,5°1° TT,Ed. Física,23
+Esc. dE Educación Media Nº 06 DE 05,5°2° TT,Artes Musica,9
+Esc. dE Educación Media Nº 06 DE 05,5°A TM,Ed. Física,21
+Esc. dE Educación Media Nº 06 DE 05,5°B TM,Artes Musica,15
+Esc. de Educación Media Nº 06 DE 19,5°1° TV/TN,Ed. Física,21
+Esc. de Educación Media Nº 06 DE 19,5°2° TV/TN,Ed. Física,20
+Esc. de Educación Media Nº 07 DE 04 Escuela De La Ribera,5°1° TV/TN,Economía y Administración,
+Esc. de Educación Media Nº 07 DE 09 María Claudia Falcone,5°1° TM,Comunicación,24
+Esc. de Educación Media Nº 07 DE 09 María Claudia Falcone,5°2° TT,Comunicación,25
+Esc. de Educación Media Nº 07 DE 09 María Claudia Falcone,5°3° TM,Comunicación,25
+Esc. de Educación Media Nº 07 DE 09 María Claudia Falcone,5°4° TT,Comunicación,23
+Liceo Comercial Nº 03 DE 05 José Manuel Estrada,5°1° TT,Cs. Soc y Humanidades,19
+Liceo Comercial Nº 03 DE 05 José Manuel Estrada,5°1° TT,Economía y Administración,18
+Liceo Comercial Nº 03 DE 05 José Manuel Estrada,5°2° TT,Cs. Soc y Humanidades,18
+Liceo Comercial Nº 03 DE 05 José Manuel Estrada,5°2° TT,Economía y Administración,18
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°1° TM,Cs. Naturales,24
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°1° TT,Cs. Naturales,25
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°2° TM,Cs. Soc y Humanidades,23
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°2° TT,Cs. Soc y Humanidades,21
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°3° TM,Cs. Naturales,24
+Liceo Nº 01 DE 02 Jose Figueroa Alcorta,5°3° TT,Cs. Soc y Humanidades,22
+Liceo Nº 02 DE 08 Amancio Alcorta,5°1° TT,Turismo,22
+Liceo Nº 02 DE 08 Amancio Alcorta,5°2° TT,Turismo,23
+Liceo Nº 02 DE 08 Amancio Alcorta,5°3° TT,Turismo,18
+Liceo Nº 02 DE 08 Amancio Alcorta,5°4° TT,Cs. Naturales,26
+Liceo Nº 02 DE 08 Amancio Alcorta,5°5° TT,Cs. Naturales,25
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°1° TT,Cs. Soc y Humanidades,19
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°2° TT,Cs. Naturales,18
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°3° TT,Economía y Administración,16
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°4° TT,Economía y Administración,22
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°5° TT,Cs. Soc y Humanidades,24
+Liceo Nº 04 DE 01 Remedios de Escalada de San Martin,5°6° TT,Cs. Naturales,13
+Liceo Nº 05 DE 11 Pascual Guaglianone,5°1° TM,Cs. Naturales,23
+Liceo Nº 05 DE 11 Pascual Guaglianone,5°1° TT,Cs. Naturales,26
+Liceo Nº 05 DE 11 Pascual Guaglianone,5°2° TM,Cs. Naturales,25
+Liceo Nº 05 DE 11 Pascual Guaglianone,5°2° TT,Cs. Naturales,21
+Liceo Nº 07 DE 01 Domingo Faustino Sarmiento,5°1° TV/TN,Cs. Naturales,11
+Liceo Nº 07 DE 01 Domingo Faustino Sarmiento,5°2° TV/TN,Cs. Soc y Humanidades,8
+Liceo Nº 07 DE 01 Domingo Faustino Sarmiento,5°3° TV/TN,Cs. Soc y Humanidades,8
+Liceo Nº 07 DE 01 Domingo Faustino Sarmiento,5°4° TV/TN,Cs. Naturales,9
+Liceo Nº 08 DE 13 Esteban Echeverria,5°1° TM,Cs. Soc y Humanidades,26
+Liceo Nº 08 DE 13 Esteban Echeverria,5°1° TT,Cs. Soc y Humanidades,21
+Liceo Nº 08 DE 13 Esteban Echeverria,5°2° TM,Cs. Naturales,22
+Liceo Nº 08 DE 13 Esteban Echeverria,5°2° TT,Cs. Naturales,22
+Liceo Nº 08 DE 13 Esteban Echeverria,PLAN 5810,PLAN 5810/19,
+Liceo Nº 09 DE 10 Santiago Derqui,5°1° TM,Cs. Soc y Humanidades,24
+Liceo Nº 09 DE 10 Santiago Derqui,5°1° TT,Cs. Soc y Humanidades,26
+Liceo Nº 09 DE 10 Santiago Derqui,5°2° TM,Cs. Naturales,20
+Liceo Nº 09 DE 10 Santiago Derqui,5°2° TT,Cs. Naturales,16
+Liceo Nº 09 DE 10 Santiago Derqui,5°3° TM,Artes Visuales,25
+Liceo Nº 09 DE 10 Santiago Derqui,5°3° TT,Artes Visuales,23
+Liceo Nº 10 DE 06 Ricardo Rojas,5°1° TM,Cs. Naturales,17
+Liceo Nº 10 DE 06 Ricardo Rojas,5°1° TT,Educación,19
+Liceo Nº 10 DE 06 Ricardo Rojas,5°2° TM,Economía y Administración,19
+Liceo Nº 10 DE 06 Ricardo Rojas,5°2° TT,Economía y Administración,17
+Liceo Nº 11 DE 15 Cornelio Saavedra,5°1° TT,Cs. Soc y Humanidades,16
+Liceo Nº 11 DE 15 Cornelio Saavedra,5°2° TT,Cs. Naturales,22
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°1° TM,Cs. Soc y Humanidades,17
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°1° TT,Cs. Soc y Humanidades,22
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°2° TM,Cs. Naturales,29
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°2° TT,Cs. Naturales,19
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°3° TM,Cs. Soc y Humanidades,19
+Liceo Nº 12 DE 08 Fray Mamerto Esquiú,5°4° TM,Cs. Naturales,23
+ENS En Lenguas Vivas Nº 01 Pte Roque Sáenz Peña DE 01,5°1° TM,Cs. Naturales,24
+ENS En Lenguas Vivas Nº 01 Pte Roque Sáenz Peña DE 01,5°2° TM,Matemática y Física,18
+ENS En Lenguas Vivas Nº 01 Pte Roque Sáenz Peña DE 01,5°3° TM,Comunicación,30
+ENS En Lenguas Vivas Nº 01 Pte Roque Sáenz Peña DE 01,5°4° TM,Educación,31
+ENS En Lenguas Vivas Nº 01 Pte Roque Sáenz Peña DE 01,5°5° JC,Lenguas extranjeras,22
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°1° TM,Cs. Naturales,17
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°2° TM,Educación,30
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°3° TT,Cs. Naturales,20
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°4° TT,Educación,17
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°5° TM,Matemática y Física,23
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°6° TT,Matemática y Física,31
+ENS En Lenguas Vivas Nº 02 Mariano Acosta DE 06,5°7° TM,Cs. Soc y Humanidades,31
+ENS En Lenguas Vivas Sofía Esther B. De Spangenberg DE 01,5°1° TM,Literatura,31
+ENS En Lenguas Vivas Sofía Esther B. De Spangenberg DE 01,5°2° TM,Cs. Soc y Humanidades,29
+ENS En Lenguas Vivas Sofía Esther B. De Spangenberg DE 01,5°3° TM,Cs. Naturales,24
+ENS En Lenguas Vivas Sofía Esther B. De Spangenberg DE 01,5°4° JC,Lenguas extranjeras,26
+ENS Nº 03 Bernardino Rivadavia DE 04,5°1° TM,Educación,11
+ENS Nº 03 Bernardino Rivadavia DE 04,5°2° TM,Educación,19
+ENS Nº 03 Bernardino Rivadavia DE 04,5°3° TM,Cs. Naturales,20
+ENS Nº 03 Bernardino Rivadavia DE 04,5°4° TM,Turismo,14
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°1° TM,Matemática y Física,26
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°2° TM,Cs. Naturales,16
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°3° TM,Literatura,23
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°4° TM,Literatura,16
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°5° TM,Educación,21
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°6° TM,Cs. Naturales,18
+ENS Nº 04 Estanislao S. Zeballos DE 08,5°7° TM,Educación,25
+ENS Nº 05 Gral. Martín Miguel Guemes DE 05,5°1° TM,Comunicación,27
+ENS Nº 05 Gral. Martín Miguel Guemes DE 05,5°2° TM,Educación,16
+ENS Nº 05 Gral. Martín Miguel Guemes DE 05,5°3° TM,Matemática y Física,16
+ENS Nº 05 Gral. Martín Miguel Guemes DE 05,5°4° TM,Cs. Naturales,15
+ENS Nº 05 Gral. Martín Miguel Guemes DE 05,5°5° TM,Educación,18
+ENS Nº 06 Vicente Lopez Y Planes DE 02,5°1° TM,Educación,25
+ENS Nº 06 Vicente Lopez Y Planes DE 02,5°2° TM,Matemática y Física,17
+ENS Nº 06 Vicente Lopez Y Planes DE 02,5°3° TM,Comunicación,28
+ENS Nº 06 Vicente Lopez Y Planes DE 02,5°4° TM,Cs. Naturales,21
+ENS Nº 07 José María Torres DE 02,5°1° TM,Cs. Soc y Humanidades,23
+ENS Nº 07 José María Torres DE 02,5°2° TM,Cs. Naturales,20
+ENS Nº 07 José María Torres DE 02,5°3° TM,Educación,15
+ENS Nº 07 José María Torres DE 02,5°4° TM,Educación,17
+ENS Nº 08 Pte. Julio Argentino Roca DE 06,5°1° TM,Educación,27
+ENS Nº 08 Pte. Julio Argentino Roca DE 06,5°2° TM,Cs. Naturales,28
+ENS Nº 08 Pte. Julio Argentino Roca DE 06,5°3° TM,Matemática y Física,29
+ENS Nº 08 Pte. Julio Argentino Roca DE 06,5°4° TT,Cs. Soc y Humanidades,30
+ENS Nº 08 Pte. Julio Argentino Roca DE 06,5°5°.TT,Cs. Naturales,15
+ENS Nº 09 Domingo Faustino Sarmiento DE 01,5°1° TM,Educación,24
+ENS Nº 09 Domingo Faustino Sarmiento DE 01,5°2° TM,Cs. Naturales,22
+ENS Nº 09 Domingo Faustino Sarmiento DE 01,5°3° TM,Turismo,28
+ENS Nº 09 Domingo Faustino Sarmiento DE 01,5°4° TM,Educación,8
+ENS Nº 09 Domingo Faustino Sarmiento DE 01,5°5° TT,Comunicación,32
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°1° TM,Educación,15
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°2° TM,Cs. Soc y Humanidades,18
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°3° TM,Cs. Soc y Humanidades,24
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°4° TM,Cs. Soc y Humanidades,15
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°5° TM,Cs. Naturales,14
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°6° TM,Cs. Naturales,15
+ENS Nº 10 Juan Bautista Alberdi DE 10,5°7° TM,Educación,11
+ENS Nº 11 Dr. Ricardo Levene DE 06,5°1° TM,Educación,24
+ENS Nº 11 Dr. Ricardo Levene DE 06,5°2°.TM,Cs. Soc y Humanidades,31
+ENS Nº 11 Dr. Ricardo Levene DE 06,5°3° TT,Educación,30
+ENS Nº 11 Dr. Ricardo Levene DE 06,5°4° TT,Cs. Naturales,28
+IES Juan B.Justo DE 17,5°1° TM,Cs. Soc y Humanidades,31
+IES Juan B.Justo DE 17,5°1° TT,Cs. Soc y Humanidades,28
+IES Lenguas Vivas Juan Ramón Fernández DE 01,5°1° TM,Lenguas,31
+IES Lenguas Vivas Juan Ramón Fernández DE 01,5°2° JC,Lenguas extranjeras,26
+IES Lenguas Vivas Juan Ramón Fernández DE 01,5°3° TM,Cs. Soc y Humanidades,29
+IES Lenguas Vivas Juan Ramón Fernández DE 01,5°4° TM,Matemática y Física,30
+"Escuela Superior de Educación Artística  en Danza Nº 2 ""Jorge Donn"" DE 18",5°1° TM,Arte-Danza / Educación,13
+"Escuela Superior de Educación Artística  en Danza Nº 2 ""Jorge Donn"" DE 18",5°2° TM,Arte-Danza / Educación,15
+"Escuela Superior de Educación Artística  en Danza Nº 2 ""Jorge Donn"" DE 18",5°3° TT,Arte-Danza / Educación,5
+"Escuela Superior de Educación Artística en Artes Visuales ""Lola Mora"" DE 21",5°A TM,Arte - Artes visuales / Educación,17
+"Escuela Superior de Educación Artística en Artes Visuales ""Lola Mora"" DE 21",5°B TT,Arte - Artes visuales / Educación,19
+"Escuela Superior de Educación Artística en Artes Visuales ""Lola Mora"" DE 21",5°C TM,Arte - Artes visuales / Educación,19
+"Escuela Superior de Educación Artística en Artes Visuales ""Lola Mora"" DE 21",5°D TT,Arte - Artes visuales / Educación,18
+"Escuela Superior de Educación Artística en Artes Visuales ""Manuel Belgrano"" DE 04",5°1° TM,Arte - Artes visuales,25
+"Escuela Superior de Educación Artística en Artes Visuales ""Manuel Belgrano"" DE 04",5°2° TT,Arte - Artes visuales,25
+"Escuela Superior de Educación Artística en Artes Visuales ""Rogelio Yrurtia"" DE 13",5°1° TM,Arte - Artes visuales / Educación,21
+"Escuela Superior de Educación Artística en Artes Visuales ""Rogelio Yrurtia"" DE 13",5°1° TT,Arte - Artes visuales / Educación,39
+"Escuela Superior de Educación Artística en Artes Visuales ""Rogelio Yrurtia"" DE 13",5°2° TT,Arte - Artes visuales / Educación,38
+"Escuela Superior de Educación Artística en Cerámica ""Fernando Arranz"" DE 18",5°1° TM,Arte-Cerámica,22
+"Escuela Superior de Educación Artística en Cerámica ""Fernando Arranz"" DE 18",5°2° TT,Arte-Cerámica,18
+Escuela Superior de Educación Artística en Cerámica N° 1 DE 02,5° 1 TM,Arte-Cerámica,18
+Escuela Superior de Educación Artística en Cerámica N° 1 DE 02,5°2° TM,Arte-Cerámica,16
+Escuela Superior de Educación Artística en Cerámica N° 1 DE 02,5°3° TT,Arte-Cerámica,19
+"Escuela Superior de Educación Artística en Danza ""Aída Victoria Mastrazzi"" DE 01",5°1° TM,Arte-Danza / Arte - Teatro,28
+"Escuela Superior de Educación Artística en Danza ""Aída Victoria Mastrazzi"" DE 01",5°2° TT,Arte-Danza / Arte - Teatro,25
+"Escuela Superior de Educación Artística en Danza N°1 ""Prof. Nelly Ramicone"" DE 20",5°1° TM,Arte-Danza / Educación,28
+"Escuela Superior de Educación Artística en Danza N°1 ""Prof. Nelly Ramicone"" DE 20",5°2° TM,Arte-Danza / Educación,20
+"Escuela Superior de Educación Artística en Danza N°1 ""Prof. Nelly Ramicone"" DE 20",5°3° TM,Arte-Danza / Educación,14
+"Escuela Superior de Educación Artística en Música ""Juan Pedro Esnaola"" DE 15",5°1° TM,Arte - Música / Educación,29
+"Escuela Superior de Educación Artística en Música ""Juan Pedro Esnaola"" DE 15",5°2° TM,Arte - Música / Educación,33
+"Escuela Superior de Educación Artística en Música ""Juan Pedro Esnaola"" DE 15",5°3° TT,Arte - Música / Educación,23
+"Escuela Superior de Educación Artística en Música ""Juan Pedro Esnaola"" DE 15",5°4° TT,Arte - Música / Educación,22
+Escuela Superior de Educación Artística en Teatro Nini Marshall DE 13,5°1° TT,Arte - Teatro / Educación,38
